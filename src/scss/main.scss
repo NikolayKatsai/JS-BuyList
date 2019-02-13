@@ -1,6 +1,7 @@
+
 body {
   background-color: #DADADA;
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
 }
 
 h3 {
@@ -110,12 +111,17 @@ html, body {
               background-color: #DB2828;
             }
 
+            .item-count {
+              user-select: none;
+            }
 
             .add-button {
               background-color: #21BA45;
             }
-            .disable{
+
+            .disable {
               opacity: 0.4;
+              cursor: not-allowed;
             }
           }
 
@@ -178,4 +184,10 @@ html, body {
       border-radius: .28571429rem;
     }
   }
+}
+
+button, input {
+  cursor: pointer;
+  user-select: none;
+  outline: none !important;
 }

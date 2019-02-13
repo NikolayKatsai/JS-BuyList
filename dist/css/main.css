@@ -1,6 +1,6 @@
 body {
   background-color: #DADADA;
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif; }
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif !important; }
 
 h3 {
   padding: 5px;
@@ -80,10 +80,13 @@ html, body {
             font-weight: bold; }
           .content-wrapper .main-content .select-items > .content .item-info .q-controller .delete-button {
             background-color: #DB2828; }
+          .content-wrapper .main-content .select-items > .content .item-info .q-controller .item-count {
+            user-select: none; }
           .content-wrapper .main-content .select-items > .content .item-info .q-controller .add-button {
             background-color: #21BA45; }
           .content-wrapper .main-content .select-items > .content .item-info .q-controller .disable {
-            opacity: 0.4; }
+            opacity: 0.4;
+            cursor: not-allowed; }
         .content-wrapper .main-content .select-items > .content .item-info :first-child {
           justify-content: flex-start; }
         .content-wrapper .main-content .select-items > .content .item-info :last-child {
@@ -119,4 +122,9 @@ html, body {
       background-color: #E8E8E8;
       padding: .5833em .833em;
       border-radius: .28571429rem; }
+
+button, input {
+  cursor: pointer;
+  user-select: none;
+  outline: none !important; }
 
