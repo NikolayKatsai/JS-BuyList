@@ -1,6 +1,25 @@
+@media (min-width: 761px) {
+  .main-content .select-items {
+    width: 70%; }
+  .main-content .manege-items {
+    width: 30%; } }
+
+@media (max-width: 760px) {
+  .main-content {
+    flex-direction: column; }
+    .main-content .select-items, .main-content .manege-items {
+      width: 100%; } }
+
+@media (max-width: 460px) {
+  .content-wrapper {
+    width: 100% !important; }
+  .select-items, .manege-items {
+    min-width: 330px; } }
+
 body {
   background-color: #DADADA;
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif !important; }
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 13px; }
 
 h3 {
   padding: 5px;
@@ -33,87 +52,79 @@ html, body {
         .content-wrapper .main-content .select-items > .content > div, .content-wrapper .main-content .manege-items > .content > div {
           display: flex;
           padding: 7px 12px; }
-    .content-wrapper .main-content .select-items {
-      width: 70%;
-      min-width: 340px; }
-      .content-wrapper .main-content .select-items > .content .search-form {
+    .content-wrapper .main-content .select-items > .content .search-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 7px; }
+      .content-wrapper .main-content .select-items > .content .search-form input {
+        padding: .67861429em 1em;
+        line-height: 1.2142em;
+        border: 1px solid rgba(34, 36, 38, 0.15); }
+      .content-wrapper .main-content .select-items > .content .search-form input[type=search] {
+        width: 75%;
+        color: rgba(0, 0, 0, 0.87);
+        border-top-left-radius: .28571429rem;
+        border-bottom-left-radius: .28571429rem; }
+      .content-wrapper .main-content .select-items > .content .search-form input[type=button] {
+        background-color: #2185D0;
+        color: #FFF;
+        font-weight: 700;
+        padding-left: 28px;
+        padding-right: 28px;
+        border-top-right-radius: .28571429rem;
+        border-bottom-right-radius: .28571429rem; }
+    .content-wrapper .main-content .select-items > .content .item-info {
+      display: flex;
+      align-items: baseline;
+      font-size: .85714286rem; }
+      .content-wrapper .main-content .select-items > .content .item-info div {
+        flex: 1;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 15px 7px; }
-        .content-wrapper .main-content .select-items > .content .search-form input {
-          padding: .67861429em 1em;
-          line-height: 1.2142em;
-          border: 1px solid rgba(34, 36, 38, 0.15); }
-        .content-wrapper .main-content .select-items > .content .search-form input[type=search] {
-          width: 75%;
-          color: rgba(0, 0, 0, 0.87);
-          border-top-left-radius: .28571429rem;
-          border-bottom-left-radius: .28571429rem; }
-        .content-wrapper .main-content .select-items > .content .search-form input[type=button] {
-          background-color: #2185D0;
+        justify-content: center; }
+      .content-wrapper .main-content .select-items > .content .item-info .q-controller {
+        display: flex;
+        align-items: baseline; }
+        .content-wrapper .main-content .select-items > .content .item-info .q-controller .delete-button, .content-wrapper .main-content .select-items > .content .item-info .q-controller .add-button {
           color: #FFF;
-          font-weight: 700;
-          padding-left: 28px;
-          padding-right: 28px;
-          border-top-right-radius: .28571429rem;
-          border-bottom-right-radius: .28571429rem; }
-      .content-wrapper .main-content .select-items > .content .item-info {
-        display: flex;
-        align-items: baseline;
-        font-size: .85714286rem; }
-        .content-wrapper .main-content .select-items > .content .item-info div {
-          flex: 1;
-          display: flex;
-          justify-content: center; }
-        .content-wrapper .main-content .select-items > .content .item-info .q-controller {
-          display: flex;
-          align-items: baseline; }
-          .content-wrapper .main-content .select-items > .content .item-info .q-controller .delete-button, .content-wrapper .main-content .select-items > .content .item-info .q-controller .add-button {
-            color: #FFF;
-            border: none;
-            border-radius: 50%;
-            height: 1.8rem;
-            width: 1.8rem;
-            padding: 7px;
-            line-height: 1;
-            font-weight: bold; }
-          .content-wrapper .main-content .select-items > .content .item-info .q-controller .delete-button {
-            background-color: #DB2828; }
-          .content-wrapper .main-content .select-items > .content .item-info .q-controller .item-count {
-            user-select: none; }
-          .content-wrapper .main-content .select-items > .content .item-info .q-controller .add-button {
-            background-color: #21BA45; }
-          .content-wrapper .main-content .select-items > .content .item-info .q-controller .disable {
-            opacity: 0.4;
-            cursor: not-allowed; }
-        .content-wrapper .main-content .select-items > .content .item-info :first-child {
-          justify-content: flex-start; }
-        .content-wrapper .main-content .select-items > .content .item-info :last-child {
-          justify-content: flex-end; }
-          .content-wrapper .main-content .select-items > .content .item-info :last-child button {
-            padding: 0.4rem 0.9rem;
-            border: none; }
-          .content-wrapper .main-content .select-items > .content .item-info :last-child .refuse-btn {
-            background-color: #DB2828;
-            color: #FFF; }
-    .content-wrapper .main-content .manege-items {
-      width: 30%;
-      min-width: 160px; }
-      .content-wrapper .main-content .manege-items .items-to-buy, .content-wrapper .main-content .manege-items .bought-items {
-        display: flex;
-        flex-wrap: wrap; }
-        .content-wrapper .main-content .manege-items .items-to-buy > div, .content-wrapper .main-content .manege-items .bought-items > div {
-          font-size: .64285714rem; }
-          .content-wrapper .main-content .manege-items .items-to-buy > div > span, .content-wrapper .main-content .manege-items .bought-items > div > span {
-            display: inline-block;
-            width: 1em;
-            border-radius: 50%;
-            background-color: #F2711C;
-            color: #FFF;
-            text-align: center;
-            line-height: 1em;
-            padding: 4px; }
+          border-radius: 50%;
+          width: 1.8rem;
+          padding: 7px;
+          line-height: 1;
+          font-weight: bold; }
+        .content-wrapper .main-content .select-items > .content .item-info .q-controller .delete-button {
+          background-color: #DB2828; }
+        .content-wrapper .main-content .select-items > .content .item-info .q-controller .item-count {
+          user-select: none; }
+        .content-wrapper .main-content .select-items > .content .item-info .q-controller .add-button {
+          background-color: #21BA45; }
+        .content-wrapper .main-content .select-items > .content .item-info .q-controller .disable {
+          opacity: 0.4;
+          cursor: not-allowed; }
+      .content-wrapper .main-content .select-items > .content .item-info :first-child {
+        justify-content: flex-start; }
+      .content-wrapper .main-content .select-items > .content .item-info :last-child {
+        justify-content: flex-end; }
+        .content-wrapper .main-content .select-items > .content .item-info :last-child button[class*="status"] {
+          padding: 0.4rem 0.9rem; }
+        .content-wrapper .main-content .select-items > .content .item-info :last-child .refuse-btn {
+          background-color: #DB2828;
+          color: #FFF; }
+    .content-wrapper .main-content .manege-items .items-to-buy, .content-wrapper .main-content .manege-items .bought-items {
+      display: flex;
+      flex-wrap: wrap;
+      user-select: none; }
+      .content-wrapper .main-content .manege-items .items-to-buy > div, .content-wrapper .main-content .manege-items .bought-items > div {
+        font-size: .64285714rem; }
+        .content-wrapper .main-content .manege-items .items-to-buy > div > span, .content-wrapper .main-content .manege-items .bought-items > div > span {
+          display: inline-block;
+          width: 1em;
+          border-radius: 50%;
+          background-color: #F2711C;
+          color: #FFF;
+          text-align: center;
+          line-height: 1em;
+          padding: 4px; }
     .content-wrapper .main-content .top-bordered {
       border-top: 1px solid rgba(34, 36, 38, 0.15); }
     .content-wrapper .main-content .rounded-label {
@@ -127,4 +138,22 @@ button, input {
   cursor: pointer;
   user-select: none;
   outline: none !important; }
+
+.page-styled-btn {
+  display: inline-block;
+  margin: .14285714em;
+  padding: .5833em .833em;
+  border-radius: 11px;
+  border: 1px solid dimgrey;
+  box-shadow: 0 4px darkgrey; }
+
+.page-styled-btn[class~="disable"]:hover {
+  box-shadow: 0 4px darkgrey; }
+
+.page-styled-btn:hover {
+  box-shadow: 0 4px darkgrey, 0 0 15px blueviolet; }
+
+.page-styled-btn:active {
+  box-shadow: 0 2px gray;
+  transform: translateY(2px); }
 

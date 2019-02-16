@@ -1,7 +1,41 @@
+$btn-z-height: 4px;
+
+@media (min-width: 761px) {
+  .main-content {
+
+    .select-items {
+      width: 70%;
+    }
+
+    .manege-items {
+      width: 30%;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .main-content {
+    flex-direction: column;
+
+    .select-items, .manege-items {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .content-wrapper {
+    width: 100% !important;
+  }
+  .select-items, .manege-items {
+    min-width: 330px;
+  }
+}
 
 body {
   background-color: #DADADA;
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 13px;
 }
 
 h3 {
@@ -46,8 +80,6 @@ html, body {
     }
 
     .select-items {
-      width: 70%;
-      min-width: 340px;
 
       > .content {
         .search-form {
@@ -98,9 +130,7 @@ html, body {
 
             .delete-button, .add-button {
               color: #FFF;
-              border: none;
               border-radius: 50%;
-              height: 1.8rem;
               width: 1.8rem;
               padding: 7px;
               line-height: 1;
@@ -132,9 +162,8 @@ html, body {
           :last-child {
             justify-content: flex-end;
 
-            button {
+            button[class*="status"] {
               padding: 0.4rem 0.9rem;
-              border: none;
             }
 
             .refuse-btn {
@@ -147,12 +176,11 @@ html, body {
     }
 
     .manege-items {
-      width: 30%;
-      min-width: 160px;
 
       .items-to-buy, .bought-items {
         display: flex;
         flex-wrap: wrap;
+        user-select: none;
 
         > div {
 
@@ -190,4 +218,26 @@ button, input {
   cursor: pointer;
   user-select: none;
   outline: none !important;
+}
+
+.page-styled-btn {
+  display: inline-block;
+  margin: .14285714em;
+  padding: .5833em .833em;
+  border-radius: 11px;
+  border: 1px solid dimgrey;
+  box-shadow: 0 $btn-z-height darkgrey;
+}
+
+.page-styled-btn[class~="disable"]:hover {
+  box-shadow: 0 $btn-z-height darkgrey;
+}
+
+.page-styled-btn:hover {
+  box-shadow: 0 $btn-z-height darkgrey, 0 0 15px blueviolet;
+}
+
+.page-styled-btn:active {
+  box-shadow: 0 2px gray;
+  transform: translateY(2px);
 }
