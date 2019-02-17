@@ -30,6 +30,22 @@ $btn-z-height: 4px;
   .select-items, .manege-items {
     min-width: 330px;
   }
+  #cooperate-badge {
+    left: 5px !important;
+  }
+}
+
+@media print {
+  #cooperate-badge {
+    > h2 {
+      display: none;
+    }
+
+    background-color: #FFFFFF;
+    border: 2px solid blueviolet;
+    bottom: 0 !important;
+    color: black !important;
+  }
 }
 
 body {
@@ -38,7 +54,7 @@ body {
   font-size: 13px;
 }
 
-h3 {
+h2, h3, h4 {
   padding: 5px;
   margin: 0;
   font-weight: 700;
@@ -279,4 +295,33 @@ button, input {
 
 .page-styled-btn:active:before {
   display: none;
+}
+
+#cooperate-badge {
+  position: fixed;
+  bottom: -3.4em;
+  left: 75px;
+  overflow: hidden;
+  padding: 7px;
+  text-align: center;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  background-color: blueviolet;
+  color: #FFFFFF;
+  transition: all 2s ease;
+
+  * {
+    color: inherit;
+    cursor: default;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+  }
+}
+
+#cooperate-badge:hover {
+  background-color: blue;
+  bottom: 0;
+
 }
