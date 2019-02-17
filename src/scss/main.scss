@@ -250,7 +250,7 @@ button, input {
   box-shadow: 0 $btn-z-height darkgrey;
 }
 
-.page-styled-btn[class~="disable"]:hover:before {
+.page-styled-btn[class~="disable"]:hover:before, .page-styled-btn[class~="disable"]:before {
   display: none;
 }
 
@@ -261,31 +261,38 @@ button, input {
 @keyframes tooltipAppear {
   from {
     visibility: hidden;
+    opacity: 0;
   }
   to {
     visibility: visible;
+    opacity: 1;
   }
 }
 
-.page-styled-btn:hover:before {
+.page-styled-btn:before {
   display: block;
+  opacity: 0;
   min-width: 100px;
-  visibility: hidden;
   content: attr(data-tooltip);
   position: absolute;
   top: -5px;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -50%);
   padding: 7px;
   background-color: blueviolet;
   color: #FFFFFF;
   white-space: nowrap;
   line-height: 2em;
   border-radius: .7rem;
+  transition: all 1.5s ease;
+  transition-delay: 0.1s;
+  z-index: -10;
+}
+
+.page-styled-btn:hover:before {
+  opacity: 1;
+  transform: translate(-50%, -100%);
   z-index: 1000;
-  animation: tooltipAppear;
-  animation-delay: 0.7s;
-  animation-fill-mode: forwards;
 }
 
 .page-styled-btn:active {
