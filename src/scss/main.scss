@@ -222,10 +222,11 @@ button, input {
 
 .page-styled-btn {
   display: inline-block;
+  position: relative;
   margin: .14285714em;
   padding: .5833em .833em;
-  border-radius: 11px;
-  border: 1px solid dimgrey;
+  border-radius: .7rem;
+  border: 1px solid #DADADA;
   box-shadow: 0 $btn-z-height darkgrey;
 }
 
@@ -233,11 +234,49 @@ button, input {
   box-shadow: 0 $btn-z-height darkgrey;
 }
 
+.page-styled-btn[class~="disable"]:hover:before {
+  display: none;
+}
+
 .page-styled-btn:hover {
   box-shadow: 0 $btn-z-height darkgrey, 0 0 15px blueviolet;
+}
+
+@keyframes tooltipAppear {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+.page-styled-btn:hover:before {
+  display: block;
+  min-width: 100px;
+  visibility: hidden;
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  padding: 7px;
+  background-color: blueviolet;
+  color: #FFFFFF;
+  white-space: nowrap;
+  line-height: 2em;
+  border-radius: .7rem;
+  z-index: 1000;
+  animation: tooltipAppear;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
 }
 
 .page-styled-btn:active {
   box-shadow: 0 2px gray;
   transform: translateY(2px);
+}
+
+.page-styled-btn:active:before {
+  display: none;
 }
