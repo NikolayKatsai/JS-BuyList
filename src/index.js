@@ -137,6 +137,15 @@ $(document).ready(function () {
             $(prName).val("").focus();
         }
     });
+    $("#search-pr").keypress(function (e) {
+        if (e.which == 13) {
+            let prName = $("#search-pr");
+            if (prName.val() != null && prName.val() !== "" && prName.val() !== " ") {
+                addItemInfo(prName.val());
+                $(prName).val("").focus();
+            }
+        }
+    })
 });
 
 
