@@ -96,14 +96,14 @@ html, body {
       .content-wrapper .main-content .select-items > .content .item-info .q-controller {
         display: flex;
         align-items: baseline; }
-        .content-wrapper .main-content .select-items > .content .item-info .q-controller .delete-button, .content-wrapper .main-content .select-items > .content .item-info .q-controller .add-button {
+        .content-wrapper .main-content .select-items > .content .item-info .q-controller .reduce-button, .content-wrapper .main-content .select-items > .content .item-info .q-controller .add-button {
           color: #FFF;
           border-radius: 50%;
           width: 1.8rem;
           padding: 7px;
           line-height: 1;
           font-weight: bold; }
-        .content-wrapper .main-content .select-items > .content .item-info .q-controller .delete-button {
+        .content-wrapper .main-content .select-items > .content .item-info .q-controller .reduce-button {
           background-color: #DB2828; }
         .content-wrapper .main-content .select-items > .content .item-info .q-controller .item-count {
           user-select: none; }
@@ -126,7 +126,11 @@ html, body {
       flex-wrap: wrap;
       user-select: none; }
       .content-wrapper .main-content .manege-items .items-to-buy > div, .content-wrapper .main-content .manege-items .bought-items > div {
-        font-size: .64285714rem; }
+        display: flex;
+        font-size: .64285714rem;
+        flex-wrap: nowrap; }
+        .content-wrapper .main-content .manege-items .items-to-buy > div > div, .content-wrapper .main-content .manege-items .bought-items > div > div {
+          display: inline-block; }
         .content-wrapper .main-content .manege-items .items-to-buy > div > span, .content-wrapper .main-content .manege-items .bought-items > div > span {
           display: inline-block;
           width: 1em;
@@ -135,15 +139,19 @@ html, body {
           color: #FFF;
           text-align: center;
           line-height: 1em;
-          padding: 4px; }
+          padding: 4px;
+          margin-left: 0.4em; }
     .content-wrapper .main-content .top-bordered {
       border-top: 1px solid rgba(34, 36, 38, 0.15); }
     .content-wrapper .main-content .rounded-label {
-      display: inline-block;
       margin: .14285714em;
       background-color: #E8E8E8;
       padding: .5833em .833em;
       border-radius: .28571429rem; }
+    .content-wrapper .main-content .crossed {
+      text-decoration-line: line-through; }
+    .content-wrapper .main-content #search-pr {
+      cursor: text; }
 
 button, input {
   cursor: pointer;
